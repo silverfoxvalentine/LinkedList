@@ -134,13 +134,16 @@ class LinkedList {
       return;
     } else {
       let current = this.headNode;
+      let prev;
       for (let i = 0; i < index - 1; i++) {
+        prev = current;
         current = current.nextNode;
       }
       if (current === this.headNode) {
         this.headNode = current.nextNode;
       } else {
-        current.nextNode = current.nextNode.nextNode;
+        console.log(prev, current);
+        prev.nextNode = current.nextNode;
       }
     }
   }
@@ -152,3 +155,7 @@ class Node {
     this.nextNode = nextNode;
   }
 }
+
+let ss = new LinkedList();
+ss.append("1");
+ss.append("2");
