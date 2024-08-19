@@ -155,7 +155,3 @@ class Node {
     this.nextNode = nextNode;
   }
 }
-
-let ss = new LinkedList();
-ss.append("1");
-ss.append("2");
